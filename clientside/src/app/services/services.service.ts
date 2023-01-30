@@ -3,8 +3,9 @@ import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 
 import { LoginData } from '../models/login-data';
+import { Env } from '../env';
 
-const baseUrl = "https://localhost:8000/api/";
+const baseUrl = Env.baseURL;
 const headerData = {
   'Accept': 'application/json',
   'Content-Type': 'application/json'
