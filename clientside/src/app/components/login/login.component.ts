@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { SocialAuthService } from "@abacritt/angularx-social-login";
+import { SocialAuthService, SocialUser } from "@abacritt/angularx-social-login";
 import { FacebookLoginProvider, GoogleLoginProvider } from "@abacritt/angularx-social-login";
 
 @Component({
@@ -7,20 +7,16 @@ import { FacebookLoginProvider, GoogleLoginProvider } from "@abacritt/angularx-s
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
-
 export class LoginComponent implements OnInit {
+  public user: SocialUser = new SocialUser;
   constructor(private authService: SocialAuthService) { }
 
-  ngOnInit() {}
-
-  loginWithGoogle(): void {
-    this.authService.signIn(GoogleLoginProvider.PROVIDER_ID)
-      .then((response) => console.log(response) );
-
-    // console.log("Triggered!");
+  ngOnInit(): void{
+    this.authService.authState.subscribe(usr => {
+      this.user = usr;
+      console.log(usr);
+    })
   }
-
-
 
   signInWithGoogle(): void {
     this.authService.signIn(GoogleLoginProvider.PROVIDER_ID);
@@ -28,5 +24,9 @@ export class LoginComponent implements OnInit {
 
   signInWithFB(): void {
     this.authService.signIn(FacebookLoginProvider.PROVIDER_ID);
+  }
+
+  rederectToHome(){
+    window.location.replace("/");
   }
 }

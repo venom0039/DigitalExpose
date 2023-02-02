@@ -19,9 +19,7 @@ const headerDataWithAuth = {
 @Injectable({
   providedIn: 'root'
 })
-
-export class ServicesService {
-
+export class CommonService {
   constructor(private http: HttpClient) { }
 
   login(data: any): Observable<LoginData>{

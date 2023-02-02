@@ -9,9 +9,14 @@ import { SocialLoginModule, SocialAuthServiceConfig } from '@abacritt/angularx-s
 import { GoogleLoginProvider, FacebookLoginProvider } from '@abacritt/angularx-social-login';
 import { Env } from './env';
 
+import { LoginComponent } from './components/login/login.component';
+import { HomeComponent } from './components/home/home.component';
+
 @NgModule({
   declarations: [
     AppComponent,
+    LoginComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -42,5 +47,4 @@ import { Env } from './env';
   ],
   bootstrap: [AppComponent]
 })
-
 export class AppModule { }
