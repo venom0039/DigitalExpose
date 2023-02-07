@@ -3,5 +3,12 @@
 <div class="p-8">
     <button class="px-4 py-2 m-1 rounded-3xl text-white bg-fuchsia-500 hover:bg-fuchsia-500/75 shadow-lg hover:shadow-fuchsia-500/25" (click)="rederectToHome()">Home</button>
     <br />
-    <button class="px-4 py-2 m-1 rounded-3xl text-white bg-rose-500 hover:bg-rose-500/75 shadow-lg hover:shadow-rose-500/25" (click)="signInWithGoogle()">Google</button>
+    <!-- <button class="px-4 py-2 m-1 rounded-3xl text-white bg-rose-500 hover:bg-rose-500/75 shadow-lg hover:shadow-rose-500/25" (click)="signInWithGoogle()">Google</button>
+    <br /> -->
+    <div (click)="signInWithGoogle()" class="google_signin">
+        <asl-google-signin-button #googleBtnRef></asl-google-signin-button>
+    </div>
+    <button class="px-4 py-2 m-1 rounded-3xl text-white bg-blue-700 hover:bg-blue-500/75 shadow-lg hover:shadow-blue-500/25" (click)="signInWithFacebook()">Facebook</button>
+    <br />
 </div>
+
