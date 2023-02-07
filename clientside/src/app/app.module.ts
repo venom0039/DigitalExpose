@@ -11,12 +11,14 @@ import { Env } from './env';
 
 import { LoginComponent } from './components/login/login.component';
 import { HomeComponent } from './components/home/home.component';
+import { GeneralNavBarComponent } from './components/navbar/general-nav-bar/general-nav-bar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    GeneralNavBarComponent
   ],
   imports: [
     BrowserModule,
