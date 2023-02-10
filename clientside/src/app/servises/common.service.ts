@@ -13,7 +13,7 @@ const headerData = { headers: new HttpHeaders({
 const headerDataWithAuth = { headers: new HttpHeaders({
   'Accept': 'application/json',
   'Content-Type': 'application/json',
-  'Authorization': "Bearer "
+  'Authorization': `Bearer ${sessionStorage.getItem("token")}`
 })};
 
 @Injectable({

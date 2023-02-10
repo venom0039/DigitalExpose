@@ -16,7 +16,7 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void{
     this.authService.authState.subscribe(usr => {
       this.user = usr;
-      console.log(usr);
+      console.table(usr);
       this.commonService.login(usr)
       .subscribe(res => console.log(res));
     })
