@@ -1,0 +1,17 @@
+@import url("./variable.scss");
+
+:root{
+    --logo-text-size: 24px;
+}
+
+/* Logo */
+.logoName1{
+    color: var(--main-c1);
+    font-size: var(--logo-text-size);
+    padding-top: 7px;
+}
+
+.logoName2{
+    color: var(--main-c2);
+    font-size: var(--logo-text-size);
+}

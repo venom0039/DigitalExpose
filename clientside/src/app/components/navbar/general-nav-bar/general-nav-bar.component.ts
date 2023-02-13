@@ -6,11 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./general-nav-bar.component.scss']
 })
 export class GeneralNavBarComponent implements OnInit {
-  public isLogged = false;
-  public dpImage = "";
+  public isLogged: boolean = false;
+  public dpImage: string = "";
+  public navlinks: number = 0;
+
   constructor() {
     if((sessionStorage.getItem("token") != undefined) && (sessionStorage.getItem("token") != null)){
-      this.isLogged = false;
+      this.isLogged = true;
     }
     this.dpImage = "https://www.sanjayjangam.com/wp-content/uploads/2021/12/beautiful-dp-for-whatsapp.jpg";
   }
@@ -22,4 +24,8 @@ export class GeneralNavBarComponent implements OnInit {
     window.location.replace("/login");
   }
 
+  //Styled functions
+  activeNavigate(id:number) {
+    this.navlinks = id;
+  }
 }
