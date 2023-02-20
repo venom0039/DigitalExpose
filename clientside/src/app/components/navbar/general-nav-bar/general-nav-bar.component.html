@@ -55,7 +55,7 @@
       </button>
     </div>
     
-    <div [ngClass]="{'items-center justify-between w-full md:flex md:w-auto md:order-1':true, 'hidden fixed': this.navMenu}" id="navbar-sticky">
+    <div [ngClass]="{'items-center justify-between w-full md:flex md:w-auto md:order-1':true, 'hidden': this.navMenu}" id="navbar-sticky">
       <ul class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white" (click)="navbarTriggerClose()">
         <li>
           <a href="#" class="block py-2 pl-3 pr-4 text-white bg-yellow-400 rounded md:bg-transparent md:text-yellow-400 md:p-0" aria-current="page">Home</a>
