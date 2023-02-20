@@ -9,6 +9,7 @@ export class GeneralNavBarComponent implements OnInit {
   public isLogged: boolean = false;
   public dpImage: string = "";
   public navlinks: number = 0;
+  public navMenu: boolean = true;
 
   constructor() {
     if((sessionStorage.getItem("token") != undefined) && (sessionStorage.getItem("token") != null)){
@@ -27,5 +28,20 @@ export class GeneralNavBarComponent implements OnInit {
   //Styled functions
   activeNavigate(id:number) {
     this.navlinks = id;
+  }
+
+  navbarTrigger(){
+    if (this.navMenu == true){
+      this.navMenu = false;
+    } 
+    else{
+      this.navMenu = true;
+    }
+  }
+
+  navbarTriggerClose(){
+    if(this.navMenu == false){
+      this.navMenu = true;
+    }
   }
 }

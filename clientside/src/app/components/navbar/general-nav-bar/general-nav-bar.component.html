@@ -37,41 +37,39 @@
 
 
 
-<nav class="navbar navbar-expand-lg bg-light rounded" aria-label="Eleventh navbar example">
-  <div class="container-fluid">
-    <div class="d-flex">
-      <p class="logoName1">Digital <strong class="logoName2">Expose</strong></p>
-    </div>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
 
-    <div class="collapse navbar-collapse" id="navbarsExample09">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <div [ngClass]="[navlinks==0 ? 'nav-link active' : 'nav-link']" (click)="activeNavigate(0)">Home</div>
+
+<nav class="bg-white px-2 sm:px-4 py-2.5 fixed w-full z-20 top-0 left-0 border-b border-gray-200 header sticky top-0">
+  <div class="container flex flex-wrap items-center justify-between mx-auto">
+    <h1 class="w-3/12">
+      <div class="auto-rows-auto">
+        <p class="text-xl">Digital <strong class="text-yellow-400">Expose</strong></p>
+      </div>
+    </h1>
+
+    <div class="flex md:order-2">
+        <button type="button" class="text-white bg-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:outline-none focus:ring-yellow-50 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0">Get started</button>
+        <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="navbar-sticky" aria-expanded="false" (click)="navbarTrigger()">
+          <span class="sr-only">Open main menu</span>
+          <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+      </button>
+    </div>
+    
+    <div [ngClass]="{'items-center justify-between w-full md:flex md:w-auto md:order-1':true, 'hidden fixed': this.navMenu}" id="navbar-sticky">
+      <ul class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white" (click)="navbarTriggerClose()">
+        <li>
+          <a href="#" class="block py-2 pl-3 pr-4 text-white bg-yellow-400 rounded md:bg-transparent md:text-yellow-400 md:p-0" aria-current="page">Home</a>
         </li>
-        <li class="nav-item">
-          <div [ngClass]="[navlinks==1 ? 'nav-link active' : 'nav-link']" (click)="activeNavigate(1)">News</div>
+        <li>
+          <a href="#" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-yellow-400 md:p-0">About</a>
         </li>
-        <li class="nav-item">
-          <div [ngClass]="[navlinks==2 ? 'nav-link active' : 'nav-link']" (click)="activeNavigate(2)">Reviews</div>
+        <li>
+          <a href="#" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-yellow-400 md:p-0">Services</a>
         </li>
-        <li class="nav-item">
-          <div [ngClass]="[navlinks==3 ? 'nav-link active' : 'nav-link']" (click)="activeNavigate(3)">Contacts</div>
+        <li>
+          <a href="#" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-yellow-400 md:p-0">Contact</a>
         </li>
-        <!-- <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li> -->
       </ul>
-      <form role="search">
-        <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-      </form>
     </div>
   </div>
 </nav>
